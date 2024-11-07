@@ -83,8 +83,8 @@ export default function TreeNode({
         onDragLeave={() => setDropPosition(false)}
         onClick={handleClick}
         className={`p-1 flex items-center gap-2 relative rounded ${
-          isHighlighted ? "bg-blue-100" : ""
-        } hover:bg-slate-100 cursor-pointer transition-colors`}
+          isHighlighted ? "bg-[#F9F9FB]" : ""
+        } hover:bg-[#F9F9FB] cursor-pointer transition-colors`}
       >
         <span>
           {isFolder ? <LucideFolder width={15} /> : <LucideFile width={15} />}

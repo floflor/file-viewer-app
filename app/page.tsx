@@ -1,5 +1,5 @@
 import { FileTree } from "@/components/FileTree";
-
+import { FileViewer } from "@/components/FileViewer";
 
 async function getTreeData() {
   const res = await fetch("https://ubique.img.ly/frontend-tha/data.json", {
@@ -15,6 +15,7 @@ export default async function Page() {
   return (
     <main className="min-h-screen flex">
       <FileTree data={data} />
+      <FileViewer />
     </main>
   );
 }
