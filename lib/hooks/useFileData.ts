@@ -8,7 +8,7 @@ export function useFileData(
     queryKey: ["fileData", fileId],
     queryFn: async () => {
       const response = await fetch(
-        `https://ubique.img.ly/frontend-tha/entries/${fileId}.json`
+        `${process.env.NEXT_PUBLIC_IMGLY_BASE_DATA_FILE}/${fileId}.json`
       );
       if (!response.ok) {
         throw new Error("File not found");

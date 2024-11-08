@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { TreeNodeI, TreeNodeProps } from "./types";
+import { TreeNodeProps } from "./types";
 import { LucideFile, LucideFolder } from "lucide-react";
 
 export default function TreeNode({
