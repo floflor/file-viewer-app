@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { TreeNodeI } from "./types";
+import { TreeNodeI, TreeNodeProps } from "./types";
 import { LucideFile, LucideFolder } from "lucide-react";
 
 export default function TreeNode({
@@ -10,14 +10,7 @@ export default function TreeNode({
   onNodeClick,
   isHighlighted,
   highlightedNodes,
-}: {
-  node: TreeNodeI;
-  path: number[];
-  onMove: (from: number[], to: number[]) => void;
-  onNodeClick: (path: number[], node: TreeNodeI) => void;
-  isHighlighted: boolean;
-  highlightedNodes: Set<string>;
-}) {
+}: TreeNodeProps) {
   const [dropPosition, setDropPosition] = React.useState<boolean>(false);
   const isFolder = !node.id;
 
