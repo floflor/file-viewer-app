@@ -115,7 +115,7 @@ export default function FileTree({ data }: { data: TreeNodeI[] }) {
   };
 
   return (
-    <div className="bg-[#E7E8EC] w-fit p-2 min-h-screen border border-l ">
+    <div className="bg-[#E7E8EC] w-fit p-2 min-h-screen dark:text-[#B2B3BD] dark:bg-[#292A2E]">
       {treeData.map((node, index) => (
         <TreeNode
           key={node.id || `${node.label}-${index}`}

@@ -14,7 +14,7 @@ export default function FileViewer() {
   }
 
   if (isPending) {
-    return <MessageDisplay message="Loading" />;
+    return <MessageDisplay message="Loading..." />;
   }
 
   if (error) {
@@ -22,7 +22,7 @@ export default function FileViewer() {
   }
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-[#F9F9FB]">
+    <div className="w-full min-h-screen flex items-center justify-center bg-[#F9F9FB] dark:bg-[#19191B]">
       <FileDetails data={data} />
     </div>
   );

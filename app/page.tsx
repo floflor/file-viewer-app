@@ -1,5 +1,6 @@
 import { FileTree } from "@/components/FileTree";
 import { FileViewer } from "@/components/FileViewer";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 async function getTreeData() {
   const res = await fetch("https://ubique.img.ly/frontend-tha/data.json", {
@@ -16,6 +17,9 @@ export default async function Page() {
     <main className="min-h-screen flex">
       <FileTree data={data} />
       <FileViewer />
+      <div className="fixed top-1 right-1">
+        <ThemeToggle />
+      </div>
     </main>
   );
 }

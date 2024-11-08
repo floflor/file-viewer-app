@@ -1,4 +1,5 @@
 import FileViewerProvider from "@/components/FileViewer/FileViewerProvider";
+import ThemeProvider from "@/providers/ThemeProvider";
 import "./globals.css";
 
 export default function RootLayout({
@@ -9,7 +10,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <FileViewerProvider>{children}</FileViewerProvider>
+        <ThemeProvider>
+          <FileViewerProvider>{children}</FileViewerProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
